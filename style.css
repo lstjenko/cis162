@@ -5,6 +5,8 @@ html {
 }
 
 body {
+    margin-left: auto;
+    margin-right: auto;
     color: darkgrey;
     background-color: ivory;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -33,6 +35,11 @@ h1, h2, h3 {
     letter-spacing: normal;
 }
 
+nav.horizontalNavigation li {
+    display:block;
+    float:none
+}
+
 nav {
     background-color: goldenrod;
     font-size: smaller;
@@ -41,11 +48,37 @@ nav {
 nav > ul {
     line-height: 2em;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: moccasin;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 section {
     background-color: moccasin;
     width: fit-content;
+}
+
+section#leftColumn {
+    clear: left;
+    float: left;
+    width: 33%;
+}
+
+section#rightColumn {
+    float: left;
+    width: 67%;
 }
 
 body > footer {
